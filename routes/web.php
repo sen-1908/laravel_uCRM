@@ -17,7 +17,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/items', ItemController::class)->middleware(['auth', 'verified']);
+Route::resource('items', ItemController::class)->middleware(['auth', 'verified']);
 
 
 
