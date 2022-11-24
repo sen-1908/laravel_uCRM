@@ -46,10 +46,7 @@ class ItemController extends Controller
             'memo'=> $request->memo,
             'price'=>$request->price,
         ]);
-        return to_route('items.index',[
-            'message'=> '登録しました',
-            'status' => 'success'
-        ]);
+        return to_route('items.index');
     }
 
     /**
@@ -58,9 +55,11 @@ class ItemController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Item $item)
     {
-        
+        return Inertia::render('Items/Show',[
+            'item' => $item,
+        ]);
     }
 
     /**
