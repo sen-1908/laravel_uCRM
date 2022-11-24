@@ -36,7 +36,7 @@ defineProps({
                                         </div>
                                     </div>
                                     </div>
-
+                                        <div></div>
                                     <div class="p-2 w-full">
                                     <div class="relative">
                                         <label for="memo" class="leading-7 text-sm text-gray-600">メモ</label>
